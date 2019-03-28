@@ -11,7 +11,7 @@
                                     <div class="mx-auto d-block">
                                           <img class="rounded-circle mx-auto d-block" src="{{ asset('designAdmin/images/admin.jpg') }}"
                                                 alt="Card image cap">
-                                          <h5 class="text-sm-center mt-2 mb-1">Steven Lee</h5>
+                                          <h5 class="text-sm-center mt-2 mb-1">{{ $myProfile[0]->name }} {{ $myProfile[0]->firstName }}</h5>
                                           <div class="location text-sm-center"><i class="fa fa-map-marker"></i>
                                                 California, United States</div>
                                     </div>
@@ -74,14 +74,7 @@
                                     </div>
                                     <div class="modal-body">
                                           <p>
-                                                There are three species of zebras: the plains zebra, the mountain zebra
-                                                and the Grévy's zebra. The plains zebra
-                                                and the mountain zebra belong to the subgenus Hippotigris, but Grévy's
-                                                zebra is the sole species of subgenus
-                                                Dolichohippus. The latter resembles an ass, to which it is closely
-                                                related, while the former two are more
-                                                horse-like. All three belong to the genus Equus, along with other living
-                                                equids.
+                                               +212 {{ $myProfile[0]->tel }}
                                           </p>
                                     </div>
                                     <div class="modal-footer">
@@ -106,14 +99,7 @@
                                     </div>
                                     <div class="modal-body">
                                           <p>
-                                                There are three species of zebras: the plains zebra, the mountain zebra
-                                                and the Grévy's zebra. The plains zebra
-                                                and the mountain zebra belong to the subgenus Hippotigris, but Grévy's
-                                                zebra is the sole species of subgenus
-                                                Dolichohippus. The latter resembles an ass, to which it is closely
-                                                related, while the former two are more
-                                                horse-like. All three belong to the genus Equus, along with other living
-                                                equids.
+                                                {{ $myProfile[0]["cv"]->presentation }}
                                           </p>
                                     </div>
                                     <div class="modal-footer">

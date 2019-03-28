@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCvsTable extends Migration {
+class NvMigration extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -17,7 +17,7 @@ class CreateCvsTable extends Migration {
 			$table->increments('id');
 			$table->string('photo');
 			$table->longText('presentation');
-			$table->integer('user_id')->unsigned()->index();
+			
 			$table->timestamps();
 		});
 		Schema::create('educations', function(Blueprint $table)
@@ -54,12 +54,12 @@ class CreateCvsTable extends Migration {
 			$table->string('role');
 			$table->string('profession');
 			$table->string('email')->unique();
+			$table->integer('cv_id')->unsigned()->index();
 			$table->string('password', 60);
 			$table->rememberToken();
 			$table->timestamps();
 		});
-		
-
+		//
 	}
 
 	/**
@@ -74,6 +74,7 @@ class CreateCvsTable extends Migration {
 		Schema::drop('experiences');
 		Schema::drop('educations');
 		Schema::drop('users');
+		//
 	}
 
 }

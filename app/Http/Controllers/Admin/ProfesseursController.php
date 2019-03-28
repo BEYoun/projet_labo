@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\facades\Auth;
 use App\User;
 use Illuminate\Support\facades\Hash;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\DB;
 
 class ProfesseursController extends Controller {
 
@@ -17,14 +19,19 @@ class ProfesseursController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Guard $auth)
 	{
 		//User::create(['email'=>'test@test.fr','password'=> Hash::make('nino')]);
 		$user = User::first()/*->get()*/;
 		Auth::login($user);
+		$log=$auth->user();
+		//$myProfile= DB::table('users')->where('id','=',$log->id)->get();
+		$myProfile=User::with('cv')->where('id','=',$log->id)->get();
+		//dd($mypro);
+		//dd($auth->user()); 
 		//Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
 		//dd(Auth::check());
-		return view('Admin/adminIndex');
+		return view('Admin/adminIndex',compact('log','myProfile'));
 
 	}
 
@@ -62,6 +69,9 @@ class ProfesseursController extends Controller {
 	}
 	public function getCv(){
 		return view('Admin/CV');
+	}
+	public function getEncadrement(){
+		return view('Admin/encadrement');
 	}
 
 	/**

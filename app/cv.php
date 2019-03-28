@@ -2,8 +2,20 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class cv extends Model {
+class Cv extends Model {
 
 	//
-
+	// public function competences(){
+	// 	return $this->hasMany('App\Competence');
+	// }
+	// public function experiences(){
+	// 	return $this->hasMany('App\Experience');
+	// }
+	// public function educations(){
+	// 	return $this->hasMany('App\Education');
+	// }
+	public function user()
+	{
+		return $this->belongsTo('App\User');
+	}
 }
