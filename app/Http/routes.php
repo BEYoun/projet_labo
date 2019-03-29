@@ -19,7 +19,7 @@ Route::get('blog', ['as'=>'blog','uses'=>'WelcomeController@blog']);
 Route::get('team', ['as'=>'team','uses'=>'WelcomeController@team']);
 Route::get('singleTeamPage', ['as'=>'singleTeamPage','uses'=>'WelcomeController@singleTeamPage']);
 Route::get('detailBlog', ['as'=>'detailBlog','uses'=>'WelcomeController@detailBlog']);
-Route::get('home', 'HomeController@index');
+Route::get('home','HomeController@index');
 
 Route::group(['namespace'=>'Admin','prefix' => 'admin'], function () {
 	Route::controller('professeurs', 'ProfesseursController');

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\facades\Auth;
 use App\User;
+use App\Etudiant;
+use App\Encadrement;
 use Illuminate\Support\facades\Hash;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\DB;
@@ -13,6 +15,9 @@ use Illuminate\Support\Facades\DB;
 class ProfesseursController extends Controller {
 
 
+	public function __constuct(){
+		$this->middleware='auth';
+	}
 	
 	/**
 	 * Display a listing of the resource.
@@ -22,16 +27,15 @@ class ProfesseursController extends Controller {
 	public function index(Guard $auth)
 	{
 		//User::create(['email'=>'test@test.fr','password'=> Hash::make('nino')]);
-		$user = User::first()/*->get()*/;
-		Auth::login($user);
+		
+		Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
 		$log=$auth->user();
 		//$myProfile= DB::table('users')->where('id','=',$log->id)->get();
-		$myProfile=User::with('cv')->where('id','=',$log->id)->get();
+		$myProfile=User::with('cv')->where('id','=',$log->id)->get()->first();
 		//dd($mypro);
 		//dd($auth->user()); 
-		//Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
 		//dd(Auth::check());
-		return view('Admin/adminIndex',compact('log','myProfile'));
+		return view('Admin/adminIndex',compact('myProfile'));
 
 	}
 
@@ -67,12 +71,48 @@ class ProfesseursController extends Controller {
 	{
 		//
 	}
+
+
+
+
+
 	public function getCv(){
 		return view('Admin/CV');
 	}
-	public function getEncadrement(){
-		return view('Admin/encadrement');
+
+
+	public function getEncadrement(Guard $auth,Request $request){
+		$var = $request->all()['cat'];
+		$encadrements =  Encadrement::where(["categorie" => "$var"])->get();
+		
+		return view('Admin/encadrement',compact('encadrements'));
 	}
+
+	public function getAddEncadrement(Request $request){
+		
+		$etudiants=Etudiant::all();
+		return view('Admin/encadrement_ajout',compact('etudiants','request'));
+	}
+	public function postAddEncadrement(Guard $auth,Request $request){
+		$encadrement= Encadrement::create(["categorie"=>$request->all()["select"],"sujet"=>$request->all()["text-input"],"user_id"=>$auth->user()->id]);
+		$tab=array();
+		$i=0;
+		foreach($request->all()['multiple-select'] as $key=>$value){
+			$tab[$i]=intval($value);
+			$i++;
+		}
+		$encadrement->etudiants()->sync($tab);
+		return redirect('admin/professeurs/encadrement');
+	}
+
+
+
+
+
+
+
+
+
 
 	/**
 	 * Show the form for editing the specified resource.

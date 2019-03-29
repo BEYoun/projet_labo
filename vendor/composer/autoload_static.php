@@ -259,6 +259,8 @@ class ComposerStaticInitdee2edfb27abcf57dd0bf76f648bac5b
 
     public static $classMap = array (
         'CreateCvsTable' => __DIR__ . '/../..' . '/database/migrations/2019_03_27_214012_create_cvs_table.php',
+        'CreateEncadrementsTable' => __DIR__ . '/../..' . '/database/migrations/2019_03_29_130617_create_encadrements_table.php',
+        'CreateEtudiantnonsTable' => __DIR__ . '/../..' . '/database/migrations/2019_03_29_181018_create_etudiantnons_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

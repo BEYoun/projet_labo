@@ -81,11 +81,11 @@
                     <h3 class="menu-title">Encadrement</h3><!-- /.menu-title -->
 
                     <li>
-                        <a href="{{ url('admin/professeurs/encadrement') }}"> <i class="menu-icon ti-email"></i>These </a>
+                        <a href="{{ url("admin/professeurs/encadrement?cat=these") }}"> <i class="menu-icon ti-email"></i>These </a>
                     </li>
 
                     <li>
-                        <a href="{{ url('admin/professeurs/encadrement') }}"> <i class="menu-icon ti-email"></i>Stage </a>
+                        <a href="{{ url("admin/professeurs/encadrement?cat=stage") }}"> <i class="menu-icon ti-email"></i>Stage </a>
                     </li>
 
 

@@ -4,6 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cv extends Model {
 
+	protected $fillable = ['photo','presentation'];
 	//
 	// public function competences(){
 	// 	return $this->hasMany('App\Competence');

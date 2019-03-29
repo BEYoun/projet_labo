@@ -11,7 +11,7 @@
                                     <div class="mx-auto d-block">
                                           <img class="rounded-circle mx-auto d-block" src="{{ asset('designAdmin/images/admin.jpg') }}"
                                                 alt="Card image cap">
-                                          <h5 class="text-sm-center mt-2 mb-1">{{ $myProfile[0]->name }} {{ $myProfile[0]->firstName }}</h5>
+                                          <h5 class="text-sm-center mt-2 mb-1">{{ $myProfile->name }} {{ $myProfile->firstName }}</h5>
                                           <div class="location text-sm-center"><i class="fa fa-map-marker"></i>
                                                 California, United States</div>
                                     </div>
@@ -74,7 +74,7 @@
                                     </div>
                                     <div class="modal-body">
                                           <p>
-                                               +212 {{ $myProfile[0]->tel }}
+                                               +212 {{ $myProfile->tel }}
                                           </p>
                                     </div>
                                     <div class="modal-footer">
@@ -99,7 +99,7 @@
                                     </div>
                                     <div class="modal-body">
                                           <p>
-                                                {{ $myProfile[0]["cv"]->presentation }}
+                                                {{ $myProfile->cv->presentation }}
                                           </p>
                                     </div>
                                     <div class="modal-footer">

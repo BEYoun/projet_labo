@@ -34,5 +34,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	{
 		return $this->belongsTo('App\Cv');
 	}
+	public function encadrements()
+	{
+		return $this->hasMany('App\Encadrement');
+	}
 
 }

@@ -25,8 +25,10 @@
 
 
     <link rel="stylesheet" href="{{ asset('/designAdmin/assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('/designAdmin/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/designAdmin/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
+    <link rel="stylesheet"
+        href="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}">
 
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
@@ -55,17 +57,20 @@
                     </li>
                     <h3 class="menu-title">Page professeur </h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="{{ url('/admin/professeurs') }}" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Accueille</a>
+                        <a href="{{ url('/admin/professeurs') }}" class="dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false"> <i
+                                class="menu-icon fa fa-laptop"></i>Accueille</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url('/admin/professeurs') }}">Ma page</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url('/admin/professeurs') }}">Ma page</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-table"></i>CV</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="{{ url('admin/professeurs/cv/') }}">Voir CV en ligne</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('admin/professeurs/cv/') }}">Voir CV en
+                                    ligne</a></li>
                             <li><i class="fa fa-table"></i><a href="{{ url('/admin/professeurs') }}">Download</a></li>
                         </ul>
                     </li>
@@ -81,11 +86,13 @@
                     <h3 class="menu-title">Encadrement</h3><!-- /.menu-title -->
 
                     <li>
-                        <a href="{{ url('admin/professeurs/encadrement') }}"> <i class="menu-icon ti-email"></i>These </a>
+                        <a href="{{ url('admin/professeurs/encadrement?cat=these') }}"> <i class="menu-icon ti-email"></i>These
+                        </a>
                     </li>
 
                     <li>
-                        <a href="{{ url('admin/professeurs/encadrement') }}"> <i class="menu-icon ti-email"></i>Stage </a>
+                        <a href="{{ url('admin/professeurs/encadrement?cat=stage') }}"> <i class="menu-icon ti-email"></i>Stage
+                        </a>
                     </li>
 
 
@@ -216,7 +223,8 @@
 
                             <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings</a>
 
-                            <a class="nav-link" href="{{ url('auth/logout') }}"><i class="fa fa-power-off"></i> Logout</a>
+                            <a class="nav-link" href="{{ url('auth/logout') }}"><i class="fa fa-power-off"></i>
+                                Logout</a>
                         </div>
                     </div>
 
@@ -288,150 +296,20 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @foreach ($encadrements as $encadrement )
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>$320,800</td>
+                                            <td>{{ $encadrement->sujet }}</td>
+                                            <td><select name="multiple-select" id="multiple-select" multiple=""
+                                                    class="form-control">
+                                                    @foreach ($encadrement->etudiants()->get() as $item)
+                                                    <option>{{ $item->nom }}</option>
+                                                    @endforeach
+                                                </select></td>
+                                            <td>{{ $encadrement->created_at->diffForHumans() }}<br><strong>Creer le :<strong>  {{ $encadrement->created_at }}</td>
+                                            <td><button type="button" class="btn btn-outline-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp; PDF</button></td>
                                         </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hope Fuentes</td>
-                                            <td>Secretary</td>
-                                            <td>San Francisco</td>
-                                            <td>$109,850</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Vivian Harrell</td>
-                                            <td>Financial Controller</td>
-                                            <td>San Francisco</td>
-                                            <td>$452,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Timothy Mooney</td>
-                                            <td>Office Manager</td>
-                                            <td>London</td>
-                                            <td>$136,200</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jackson Bradshaw</td>
-                                            <td>Director</td>
-                                            <td>New York</td>
-                                            <td>$645,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Olivia Liang</td>
-                                            <td>Support Engineer</td>
-                                            <td>Singapore</td>
-                                            <td>$234,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bruno Nash</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
-                                            <td>$163,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sakura Yamamoto</td>
-                                            <td>Support Engineer</td>
-                                            <td>Tokyo</td>
-                                            <td>$139,575</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Thor Walton</td>
-                                            <td>Developer</td>
-                                            <td>New York</td>
-                                            <td>$98,540</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Finn Camacho</td>
-                                            <td>Support Engineer</td>
-                                            <td>San Francisco</td>
-                                            <td>$87,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Serge Baldwin</td>
-                                            <td>Data Coordinator</td>
-                                            <td>Singapore</td>
-                                            <td>$138,575</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zenaida Frank</td>
-                                            <td>Software Engineer</td>
-                                            <td>New York</td>
-                                            <td>$125,250</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zorita Serrano</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
-                                            <td>$115,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jennifer Acosta</td>
-                                            <td>Junior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>$75,650</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cara Stevens</td>
-                                            <td>Sales Assistant</td>
-                                            <td>New York</td>
-                                            <td>$145,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hermione Butler</td>
-                                            <td>Regional Director</td>
-                                            <td>London</td>
-                                            <td>$356,250</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lael Greer</td>
-                                            <td>Systems Administrator</td>
-                                            <td>London</td>
-                                            <td>$103,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jonas Alexander</td>
-                                            <td>Developer</td>
-                                            <td>San Francisco</td>
-                                            <td>$86,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Shad Decker</td>
-                                            <td>Regional Director</td>
-                                            <td>Edinburgh</td>
-                                            <td>$183,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Michael Bruce</td>
-                                            <td>Javascript Developer</td>
-                                            <td>Singapore</td>
-                                            <td>$183,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
-                                            <td>$112,000</td>
-                                        </tr>
+                                        @endforeach
+
                                     </tbody>
                                 </table>
                             </div>
@@ -441,7 +319,16 @@
 
                 </div>
             </div><!-- .animated -->
+            <div class="row">
+                <div class="col-md-6 offset-md-6 col-sm-6 ml-auto">
+                    <section class="card">
+                        <a class="btn btn-primary" href="{{ url("admin/professeurs/add-encadrement") }}"
+                            role="button">Add</a>
+                    </section>
+                </div>
+            </div>
         </div><!-- .content -->
+
 
 
     </div><!-- /#right-panel -->
@@ -449,23 +336,23 @@
     <!-- Right Panel -->
 
 
-    
+
     <script src="{{ asset('/designAdmin/vendors/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/assets/js/main.js') }}"></script>
 
     <script src="{{ asset('/designAdmin/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/jszip/dist/jszip.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
-  <script src="{{ asset('/designAdmin/assets/js/init-scripts/data-table/datatables-init.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/jszip/dist/jszip.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/assets/js/init-scripts/data-table/datatables-init.js') }}"></script>
 
 
 </body>
