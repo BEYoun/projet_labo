@@ -27,16 +27,18 @@ class ProfesseursController extends Controller {
 	public function index(Guard $auth)
 	{
 		//User::create(['email'=>'test@test.fr','password'=> Hash::make('nino')]);
-		
-		Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
-		$log=$auth->user();
+		if(Auth::check()){
+		//Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
+			$log=$auth->user();
 		//$myProfile= DB::table('users')->where('id','=',$log->id)->get();
-		$myProfile=User::with('cv')->where('id','=',$log->id)->get()->first();
+			$myProfile=User::with('cv')->where('id','=',$log->id)->get()->first();
 		//dd($mypro);
 		//dd($auth->user()); 
 		//dd(Auth::check());
-		return view('Admin/adminIndex',compact('myProfile'));
-
+			return view('Admin/adminIndex',compact('myProfile'));
+		}else{
+			return redirect()->back();
+		}
 	}
 
 	/**

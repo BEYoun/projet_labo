@@ -21,6 +21,11 @@ Route::get('singleTeamPage', ['as'=>'singleTeamPage','uses'=>'WelcomeController@
 Route::get('detailBlog', ['as'=>'detailBlog','uses'=>'WelcomeController@detailBlog']);
 Route::get('home','HomeController@index');
 
+
+
+Route::group(['namespace'=>'SuperAdmin','prefix' => 'superAdmin'], function () {
+    Route::resource('superProfesseurs', 'SuperProfesseursController');
+});
 Route::group(['namespace'=>'Admin','prefix' => 'admin'], function () {
 	Route::controller('professeurs', 'ProfesseursController');
     	Route::resource('professeurs', 'ProfesseursController');

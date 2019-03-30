@@ -1,5 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Support\facades\Auth;
+
+use Illuminate\Contracts\Auth\Guard;
+
 class HomeController extends Controller {
 
 	/*
@@ -28,9 +32,13 @@ class HomeController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index(Guard $auth)
 	{
-		return view('home');
+		if($auth->user()->role=="admin"){
+			return redirect('admin/professeurs/');
+		}else{
+			return redirect('superAdmin/superProfesseurs/');
+		}
 	}
 
 }
