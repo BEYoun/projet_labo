@@ -2,7 +2,11 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Illuminate\Support\facades\Auth;
+use App\user;
+use Illuminate\Support\facades\Hash;
+use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class SuperProfesseursController extends Controller {
@@ -14,15 +18,22 @@ class SuperProfesseursController extends Controller {
 	 */
 
 
-	public function __constuct(){
-		$this->middleware='auth';
-	}
 	
-	public function index()
+	
+	public function index(Guard $auth)
 	{
+		
 		return view('SuperAdmin/index');
 	}
-
+	public function getAutorisation()
+	{
+		$users = User::all();
+		return view('SuperAdmin/users',compact('users'));
+	}
+	public function getForum()
+	{
+		return view('SuperAdmin/forum');
+	}
 	/**
 	 * Show the form for creating a new resource.
 	 *

@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\DB;
 class ProfesseursController extends Controller {
 
 
-	public function __constuct(){
-		$this->middleware='auth';
-	}
+	
 	
 	/**
 	 * Display a listing of the resource.

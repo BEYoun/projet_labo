@@ -96,6 +96,9 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Register</a></li>
+                            @if (Auth::user()->role=="superadmin")
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('/superAdmin/superProfesseurs/') }}">aller page super admin</a></li>
+                            @endif
                             <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a>
                             </li>
                         </ul>

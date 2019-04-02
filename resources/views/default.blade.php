@@ -112,9 +112,14 @@
 
                                                       </li>
                                                       <li>
+                                                            @if (Auth::check())
+                                                                  <a href="{{ url('superAdmin/superProfesseurs/') }}">retour</a>
+                                                            @else
                                                                   <a href="{{ url('/auth/login') }}">Login</a>
-      
-                                                            </li>
+                                                                
+                                                            @endif
+
+                                                      </li>
 
                                                 </ul>
                                           </nav>
@@ -137,8 +142,9 @@
                                     <div class="f-widget">
                                           <a href="index.html">
                                                 <!-- Change the logo here-->
-                                                <h4 class="logo-text1"><img src="{{ asset('/design/image/logo/logo.JPG') }}" alt=""
-                                                      style="width: 90px"></h4>
+                                                <h4 class="logo-text1"><img
+                                                            src="{{ asset('/design/image/logo/logo.JPG') }}" alt=""
+                                                            style="width: 90px"></h4>
                                           </a>
                                           <p class="m-t-30">Lorem ipsum dolor sit amet, adipiscing elit. Donec elit
                                                 erat, vestibulum ac luctus id, ultrices.</p>

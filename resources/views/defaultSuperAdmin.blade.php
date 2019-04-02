@@ -5,7 +5,6 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
 <!--<![endif]-->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,16 +24,14 @@
 
 
     <link rel="stylesheet" href="{{ asset('/designAdmin/assets/css/style.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('/designAdmin/vendors/datatables.net-bs4/css/dataTables.bootstrap4.min.css') }}">
-    <link rel="stylesheet"
-        href="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css') }}">
-
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
 </head>
 
 <body>
+
+
     <!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
@@ -53,27 +50,22 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.html"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{{ url('/superAdmin/superProfesseurs') }}"> <i
+                                class="menu-icon fa fa-dashboard"></i>Dashboard </a>
                     </li>
-                    <h3 class="menu-title">Page professeur </h3><!-- /.menu-title -->
+                    <h3 class="menu-title">Gerer les droit d'acces </h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
-                        <a href="{{ url('/admin/professeurs') }}" class="dropdown-toggle" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false"> <i
-                                class="menu-icon fa fa-laptop"></i>Accueille</a>
+                        <a href="{{ url('/superAdmin/superProfesseurs/autorisation') }}" class="dropdown-toggle"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+                                class="menu-icon fa fa-laptop"></i>autorisation</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-puzzle-piece"></i><a href="{{ url('/admin/professeurs') }}">Ma page</a>
-                            </li>
+                            <li><i class="fa fa-puzzle-piece"></i><a
+                                    href="{{ url('/superAdmin/superProfesseurs/autorisation') }}">role</a></li>
+                            <li><i class="fa fa-puzzle-piece"></i><a
+                                    href="{{ url('/admin/professeurs') }}">autorisation</a></li>
                         </ul>
                     </li>
-                    <li class="menu-item-has-children dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>CV</a>
-                        <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="{{ url('admin/professeurs/cv/') }}">Voir CV en
-                                    ligne</a></li>
-                            <li><i class="fa fa-table"></i><a href="{{ url('/admin/professeurs') }}">Download</a></li>
-                        </ul>
-                    </li>
+
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-th"></i>publications</a>
@@ -83,32 +75,46 @@
                         </ul>
                     </li>
 
-                    <h3 class="menu-title">Encadrement</h3><!-- /.menu-title -->
-
-                    <li>
-                        <a href="{{ url('admin/professeurs/encadrement?cat=these') }}"> <i
-                                class="menu-icon ti-email"></i>These
-                        </a>
+                    <h3 class="menu-title">publications</h3><!-- /.menu-title -->
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>forum</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ url('/superAdmin/superProfesseurs/forum') }}">voir</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('/admin/professeurs') }}">modification</a>
+                            </li>
+                        </ul>
                     </li>
-
-                    <li>
-                        <a href="{{ url('admin/professeurs/encadrement?cat=stage') }}"> <i
-                                class="menu-icon ti-email"></i>Stage
-                        </a>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>news</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ url('admin/professeurs/cv/') }}">voir</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('/admin/professeurs') }}">modification</a>
+                            </li>
+                        </ul>
                     </li>
-
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> <i class="menu-icon fa fa-table"></i>page acceuil</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{ url('admin/professeurs/cv/') }}">modifier</a>
+                            </li>
+                            <li><i class="fa fa-table"></i><a href="{{ url('/admin/professeurs') }}">ajout</a></li>
+                        </ul>
+                    </li>
 
                     <h3 class="menu-title">Extras</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Pages</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-login.html">Login</a></li>
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="page-register.html">Register</a></li>
-                            <li><i class="menu-icon fa fa-paper-plane"></i><a href="pages-forget.html">Forget Pass</a>
-                            </li>
-                        </ul>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('admin/professeurs/cv') }}">gestion de ma page
+                                    professeur</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('/33') }}">voir le site</a></li>
                     </li>
+                </ul>
+                </li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
@@ -256,109 +262,38 @@
 
         </header><!-- /header -->
         <!-- Header-->
-
-        <div class="breadcrumbs">
-            <div class="col-sm-4">
-                <div class="page-header float-left">
-                    <div class="page-title">
-                        <h1>Dashboard</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div class="page-header float-right">
-                    <div class="page-title">
-                        <ol class="breadcrumb text-right">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Table</a></li>
-                            <li class="active">Data table</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="content mt-3">
-            <div class="animated fadeIn">
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <strong class="card-title">Data Table</strong>
-                            </div>
-                            <div class="card-body">
-                                <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
-                                    <thead>
-                                        <tr>
-                                            <th>Sujet</th>
-                                            <th>etudiant</th>
-                                            <th>date</th>
-                                            <th>pdf</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($encadrements as $encadrement )
-                                        <tr>
-                                            <td>{{ $encadrement->sujet }}</td>
-                                            <td><select name="multiple-select" id="multiple-select" multiple=""
-                                                    class="form-control">
-                                                    @foreach ($encadrement->etudiants()->get() as $item)
-                                                    <option>{{ $item->nom }}</option>
-                                                    @endforeach
-                                                </select></td>
-                                            <td>{{ $encadrement->created_at->diffForHumans() }}<br><strong>Creer le
-                                                    :<strong> {{ $encadrement->created_at }}</td>
-                                            <td><button type="button" class="btn btn-outline-secondary"><i
-                                                        class="fa fa-lightbulb-o"></i>&nbsp; PDF</button></td>
-                                        </tr>
-                                        @endforeach
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div><!-- .animated -->
-            <div class="row">
-                <div class="col-md-6 offset-md-6 col-sm-6 ml-auto">
-                    <section class="card">
-                        <a class="btn btn-primary" href="{{ url("admin/professeurs/add-encadrement") }}"
-                            role="button">Add</a>
-                    </section>
-                </div>
-            </div>
-        </div><!-- .content -->
-
-
-
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
-
-
-
+        @yield('content')
+        
+    </div>
     <script src="{{ asset('/designAdmin/vendors/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/popper.js/dist/umd/popper.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/assets/js/main.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/chart.js/dist/Chart.bundle.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/assets/js/dashboard.js') }}"></script>
+    <script src="{{ asset('/designAdmin/assets/js/widgets.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
+    <script src="{{ asset('/designAdmin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+    <script>
+        (function ($) {
+            "use strict";
 
-    <script src="{{ asset('/designAdmin/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/jszip/dist/jszip.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/pdfmake/build/pdfmake.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/pdfmake/build/vfs_fonts.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.html5.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.print.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/vendors/datatables.net-buttons/js/buttons.colVis.min.js') }}"></script>
-    <script src="{{ asset('/designAdmin/assets/js/init-scripts/data-table/datatables-init.js') }}"></script>
-
-
+            jQuery('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#1de9b6',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#1de9b6', '#03a9f5'],
+                normalizeFunction: 'polynomial'
+            });
+        })(jQuery);
+    </script>
+    
 </body>
 
 </html>

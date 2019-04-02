@@ -20,13 +20,15 @@ Route::get('team', ['as'=>'team','uses'=>'WelcomeController@team']);
 Route::get('singleTeamPage', ['as'=>'singleTeamPage','uses'=>'WelcomeController@singleTeamPage']);
 Route::get('detailBlog', ['as'=>'detailBlog','uses'=>'WelcomeController@detailBlog']);
 Route::get('home','HomeController@index');
+Route::get('/{var}','WelcomeController@service');
 
 
 
-Route::group(['namespace'=>'SuperAdmin','prefix' => 'superAdmin'], function () {
-    Route::resource('superProfesseurs', 'SuperProfesseursController');
+Route::group(['namespace'=>'SuperAdmin','middleware'=>'auth','prefix' => 'superAdmin'], function () {
+	Route::controller('superProfesseurs', 'SuperProfesseursController');
+    	Route::resource('superProfesseurs', 'SuperProfesseursController');
 });
-Route::group(['namespace'=>'Admin','prefix' => 'admin'], function () {
+Route::group(['namespace'=>'Admin','middleware'=>'auth','prefix' => 'admin'], function () {
 	Route::controller('professeurs', 'ProfesseursController');
     	Route::resource('professeurs', 'ProfesseursController');
     //Route::resource('professeurs/store', 'ProfesseursController');
