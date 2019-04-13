@@ -56,6 +56,9 @@ class WelcomeController extends Controller {
 	public function singleTeamPage(){
 		return view('singleTeamPage');
 	}
+	public function singleEquipePage(){
+		return view('singleEquipePage');
+	}
 	public function detailBlog(){
 		return view('detailBlog');
 	}

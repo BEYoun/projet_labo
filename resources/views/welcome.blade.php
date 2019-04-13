@@ -15,8 +15,7 @@
 			<a href="{{ asset('/design/css/colors/defaults-color.css') }}"
 				class="single-color defaults-color">Defaults</a>
 			<a href="{{ asset('/design/css/colors/red-color.css') }}" class="single-color red-color">Red</a>
-			<a href="{{ asset('/design/css/colors/purple-color.css') }}"
-				class="single-color purple-color">Purple</a>
+			<a href="{{ asset('/design/css/colors/purple-color.css') }}" class="single-color purple-color">Purple</a>
 			<a href="{{ asset('/design/css/colors/blue-color.css') }}" class="single-color pink-color">Pink</a>
 		</div>
 	</div>
@@ -41,10 +40,10 @@
 								<h1>Grow Your <span>Business</span></h1>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
 									expedita maxime culpa.</p>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">View Demo</a>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">Find More</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">View
+									Demo</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">Find
+									More</a>
 							</div>
 							<!-- end slider content -->
 						</div>
@@ -62,10 +61,10 @@
 								<h1>Grow Your <span>Businesss</span></h1>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
 									expedita maxime culpa.</p>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">View Demo</a>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">Find More</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">View
+									Demo</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">Find
+									More</a>
 							</div>
 							<!-- end slider content -->
 						</div>
@@ -83,10 +82,10 @@
 								<h1>Increase Product <span>Sales </span></h1>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
 									expedita maxime culpa.</p>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">View Demo</a>
-								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical"
-									href="#">Find More</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">View
+									Demo</a>
+								<a class="btn btn-default btn-animate btn-style hvr-shutter-out-vertical" href="#">Find
+									More</a>
 							</div>
 							<!-- end slider content -->
 						</div>
@@ -116,8 +115,7 @@
 			<!-- About image -->
 			<div class="col-md-6">
 				<a href="#" class="img-about">
-					<img src="{{ asset('/design/image/about/dummy-image.jpg') }}" alt=""
-						class="img-responsive">
+					<img src="{{ asset('/design/image/about/dummy-image.jpg') }}" alt="" class="img-responsive">
 				</a>
 			</div>
 			<div class="col-md-6">
@@ -208,8 +206,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="team-single text-center m-b-30">
 					<div class="team-img">
-						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt=""
-							class="img img-responsive">
+						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt="" class="img img-responsive">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -227,8 +224,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="team-single text-center m-b-30">
 					<div class="team-img">
-						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt=""
-							class="img img-responsive">
+						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt="" class="img img-responsive">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -246,8 +242,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="team-single text-center m-b-30">
 					<div class="team-img">
-						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt=""
-							class="img img-responsive">
+						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt="" class="img img-responsive">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -265,8 +260,7 @@
 			<div class="col-md-3 col-sm-6 col-xs-12">
 				<div class="team-single text-center m-b-30">
 					<div class="team-img">
-						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt=""
-							class="img img-responsive">
+						<img src="{{ asset('/design/image/team/dummy-image.jpg') }}" alt="" class="img img-responsive">
 						<ul>
 							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 							<li><a href="#"><i class="fa fa-twitter"></i></a></li>

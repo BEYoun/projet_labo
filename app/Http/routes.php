@@ -18,6 +18,7 @@ Route::get('projects', ['as'=>'projects','uses'=>'WelcomeController@projects']);
 Route::get('blog', ['as'=>'blog','uses'=>'WelcomeController@blog']);
 Route::get('team', ['as'=>'team','uses'=>'WelcomeController@team']);
 Route::get('singleTeamPage', ['as'=>'singleTeamPage','uses'=>'WelcomeController@singleTeamPage']);
+Route::get('singleEquipePage', ['as'=>'singleEquipePage','uses'=>'WelcomeController@singleEquipePage']);
 Route::get('detailBlog', ['as'=>'detailBlog','uses'=>'WelcomeController@detailBlog']);
 Route::get('home','HomeController@index');
 Route::get('/{var}','WelcomeController@service');
