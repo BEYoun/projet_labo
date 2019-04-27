@@ -1,0 +1,169 @@
+.orga_assist_dir_sg
+{
+	float:left;
+	width:140px;
+	height:43px;
+	margin-bottom:4px;
+	background-color:#FFC090;
+	//background-image:url(img/bg_orga_serv.gif);
+	background-repeat:repeat-y;
+	padding:10px 0 10px 6px
+}
+.orga_assist_dir_r
+{
+	float:left;
+	width:110px;
+	height:56px;
+	margin-bottom:4px;
+	background-color:#EBF1DE;
+	//background-image:url(img/bg_orga_serv.gif);
+	background-repeat:repeat-y;
+	padding:10px 0 10px 6px
+}
+.orga_assist_dir_ipf
+{
+	float:left;
+	width:110px;
+	height:60px;
+	margin-bottom:4px;
+	background-color:#B7DEE8;
+	//background-image:url(img/bg_orga_serv.gif);
+	background-repeat:repeat-y;
+	padding:10px 0 10px 6px
+}
+.orga_bloc_org_dir
+{
+	float:left;
+	height:60px;
+	width:170px;
+	line-height:12pt;
+	margin-left:6px;
+	background-color:#FFFFFF;
+	//background-image:url(img/bg_orga_org.gif);
+	background-repeat:repeat-x;padding:0px 0 5px 6px
+}
+.orga_bloc_org_cons
+{
+        height:15px;
+        width:170px;
+        line-height:12pt;
+        margin-left:6px;
+        background-color:#FDEADA;
+        background-repeat:repeat-x;padding:5px 0 5px 6px
+}
+
+.orga_bloc_org_cons_blanc
+{
+        height:5px;
+        width:170px;
+        line-height:12pt;
+        margin-left:6px;
+        background-color:#FFFFFF;
+        background-repeat:repeat-x;padding:8px 0 5px 6px
+}
+
+.col1 {
+	float:left;
+	//height:318px;
+	height:393px;
+	width:20px;
+	background-image:url(img/pole_ressource.png);
+}
+.col3 {
+	float:left;
+	height:150px;
+	width:20px;
+	background-image:url(img/pole_technique3.png);
+}
+p.rotation{
+	width:200px;
+	background-color:#FF00FF;
+	text-align:center;
+}
+
+.rotate {
+	margin:0px;
+        color:#00FF00;
+        background-color:#D7E4BD;
+        text-align:center;
+        height:20px;
+        width:300px;
+
+    margin: 0;
+    padding: 0;
+    -webkit-transform-origin: 0 0;
+       -moz-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+         -o-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+         -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+
+.orga_global{float:left;width:712px;height:500px;font-size:10px;margin-top:10px;line-height:10pt;margin-bottom:15px;font-family:Arial, Helvetica, sans-serif;color:#744982;background-image:url(img/bg-orgav2.gif);background-repeat:no-repeat;background-position:142px 14px}
+
+.orga_dir2 {
+	float:left;
+	height:250px;
+	width:548px;
+	margin-left:19px
+}
+
+.orga_dir_cadre {
+	float:left;
+	height:60px;
+	width:190px;
+	margin-left:19px
+    background-image: url("img/bg_orga_serv.gif");
+    background-repeat: repeat-y;
+	text-align:center;
+}
+
+.orga_dir_bloc2 {
+    float: left;
+    height: 120px;
+    width: 200px;
+    margin-right: 18px;
+    background-color: #F3EBD9;
+    padding: 10px 10px 10px 6px;
+}
+
+.orga_bloc_org_cons_conseilo {
+    height: 30px;
+    width: 170px;
+    line-height: 12pt;
+    margin-left: 6px;
+    background-color: #FDEADA;
+    background-repeat: repeat-x;
+    padding: 5px 0px 5px 6px;
+}
+
+
+.orga_bloc_org_cons_charge {
+    height: 80px;
+    width: 170px;
+    line-height: 12pt;
+    margin-left: 6px;
+    background-color: #FDEADA;
+    background-repeat: repeat-x;
+    padding: 5px 0px 5px 6px;
+}
+
+.orga_global {
+    float: left;
+    width: 712px;
+    height: 650px;
+    font-size: 10px;
+    margin-top: 10px;
+    line-height: 10pt;
+    margin-bottom: 15px;
+    font-family: Arial,Helvetica,sans-serif;
+    color: #744982;
+    background-image: url("img/bg_orga_v3.gif");
+    background-repeat: no-repeat;
+    background-position: 142px 14px;
+}

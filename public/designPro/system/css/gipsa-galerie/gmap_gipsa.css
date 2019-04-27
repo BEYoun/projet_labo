@@ -1,0 +1,65 @@
+			#contenu_map_collab {float:left; height:600px; width:955px; font-family:Arial, Helvetica, sans-serif;}
+			#map_canvas {float:left; margin-right:15px; height:600px; width:710px;}
+			#menu_collab {float:left; margin-top:135px; height:455px; width:222px; overflow:auto;}
+			
+			.menu_dpt a {float: left; color: #999999; font-size: 11px; font-weight: bold; line-height: 19px; margin:10px 5px 0 0; text-decoration: underline; width: 170px;}
+			.menu_dpt_all a {float:left; margin-top:15px; font-size:13px; color:#7C4B85; font-weight: bold; width:200px; text-decoration:underline;}
+			
+			a.dauto {height: 19px; padding-left:35px; background-image:url(img_font/picto_dauto.gif); background-repeat:no-repeat; margin-bottom:5px; color:#AB3362; text-decoration:underline; text-transform:uppercase;}
+			a.dis {height: 19px; padding-left:35px; background-image:url(img_font/picto_dis.gif); background-repeat:no-repeat; margin-bottom:5px; color:#518CAF; text-decoration:underline; text-transform:uppercase;}
+			a.dpc {height: 19px; padding-left:35px; background-image:url(img_font/picto_dpc.gif); background-repeat:no-repeat; margin-bottom:5px; color:#A4B130; text-decoration:underline; text-transform:uppercase;}
+            			
+			.sum_dauto {float:left; color:#AB3362; margin-right:5px; font-weight:bold; text-transform:uppercase; font-size:9px; background-image:url(img_font/puce_menu_droit_auto.png); background-repeat:no-repeat; background-position:0 50%; padding-left:13px;}
+			.sum_dis {float:left; color:#518CAF; margin-right:5px; font-weight:bold; text-transform:uppercase; font-size:9px; background-image:url(img_font/puce_menu_droit_im_si.png); background-repeat:no-repeat; background-position:0 50%; padding-left:13px;}
+			.sum_dpc {float:left; color:#A4B130; margin-right:5px; font-weight:bold; text-transform:uppercase; font-size:9px; background-image:url(img_font/puce_menu_droit_par_co.png); background-repeat:no-repeat; background-position:0 50%; padding-left:13px;}
+			
+			h1.sum_struc {margin:0 0 5px 0; font-size:10px; font-weight:normal; color:#555; text-decoration:none;}
+			.sum_struc a {margin:0 0 5px 0; font-size:10px; font-weight:normal; color:#555; text-decoration:none;}
+			
+			h1.iw-summary-gipsa {width:100%; color: #7C4B85; float: left; font-size: 15px; line-height: 12px; overflow:hidden; text-decoration: none;}
+			h1.summary {color: #666; float: left; font-size: 10px; height: 10px; line-height: 10px; overflow:hidden; text-decoration: none; width: 190px; }
+			h1.summary a {color: #666; font-size: 10px; height: 10px; line-height: 10px; overflow:hidden; text-decoration: none; width: 190px; }
+			h1.summary:hover {text-decoration:none; text-decoration:underline;}
+			h1.summary a:hover {text-decoration:none; text-decoration:underline;}
+
+			.sum_dauto span {color:#AB3362; text-transform:uppercase; font-size:10px;}
+			.sum_dis span {color:#518CAF; text-transform:uppercase; font-size:10px;}
+			.sum_dpc span {color:#A4B130; text-transform:uppercase; font-size:10px;}
+			
+			
+			.show {display:block;}
+			.hidden {display:none;}
+			.clickable {cursor:pointer;}
+			
+			.iw {height:auto; padding:3px; margin:0 0px 20px 0; }
+			
+			.iw-pays_ville_dauto {float:left; display:block; width:100%; color:#AB3362; margin-bottom:5px; font-size:13px; font-style:italic; text-transform:uppercase;}
+			.iw-pays_ville_dis {float:left; display:block; width:100%; color:#518CAF; margin-bottom:5px; font-size:13px; font-style:italic; text-transform:uppercase;}
+			.iw-pays_ville_dpc {float:left; display:block; width:100%; color:#A4B130; margin-bottom:5px; font-size:13px; font-style:italic; text-transform:uppercase;}
+			
+			.iw-struc_link {margin:0; padding:0; color: #444; font-size: 13px; font-weight: bold; text-transform: uppercase;}
+			.iw-struc_link span {margin:0; padding:0; color: #444; font-size: 12px; font-weight: normal; text-transform: uppercase;} /*Ville - Pays*/
+			.iw-struc-sep {float:left; margin-bottom:10px; padding-bottom:12px; width:100%; border-bottom:1px dotted #999;}
+			.iw-collab-sep_dauto {float:left; border-left:4px solid #AB3362; padding-left:10px; margin-bottom:15px;}
+			.iw-collab-sep_dis {float:left; border-left:4px solid #518CAF; padding-left:10px; margin-bottom:15px;}
+			.iw-collab-sep_dpc {float:left; border-left:4px solid #A4B130; padding-left:10px; margin-bottom:15px;}
+			.iw-partenaire_dpt_eqp {margin:0; padding-top:5px; color: #444; font-size: 12px; font-weight: bold; text-transform: none;}
+			
+			.iw-description { display:block; margin:0; color: #555555; font-weight:bold; font-size: 12px; line-height: 18px; }
+			.iw-description-gipsa { display:block; margin:0; color: #555555; font-weight:normal; font-size: 12px; line-height: 18px; }
+			.iw-struc_dpt_eqp_link { display:block; margin:0; color: #555555; font-weight:bold; font-size: 12px; line-height: 18px; }
+			.iw-cadre { display:block; margin:5px 0 0 0 ; color: #555555; font-size: 12px; font-weight:normal; line-height: 18px; }
+			.iw-part_titre { display:block; margin:5px 0 0 0 ; color: #444; font-weight:bold; font-style:italic; font-size: 11px; line-height: 18px; }
+			.iw-part_link { margin-right:5px; color: #555555; font-style:italic; font-size: 11px; line-height: normal; }
+			p.iw-part_link { margin:0; padding:0; }
+			.iw-perm_link { margin-right:5px; color: #555555; font-style:italic; font-size: 11px; line-height: 18px; }
+			.iw-perm_link_dauto { margin-right:5px; color: #AB3362; font-style:italic; font-size: 11px; line-height: 18px; }
+			.iw-perm_link_dis { margin-right:5px; color: #518CAF; font-style:italic; font-size: 11px; line-height: 18px; }
+			.iw-perm_link_dpc { margin-right:5px; color: #A4B130; font-style:italic; font-size: 11px; line-height: 18px; }
+			.iw-permanent_eqp_dauto { display:block; margin:10px 0 0 0; font-weight:bold; color:#ac3662; font-size: 12px; line-height: 18px; }
+			.iw-permanent_eqp_dis { display:block; margin:10px 0 0 0; font-weight:bold; color:#518CAF; font-size: 12px; line-height: 18px; }
+			.iw-permanent_eqp_dpc { display:block; margin:10px 0 0 0; font-weight:bold; color:#a4b133; font-size: 12px; line-height: 18px; }
+			
+			.no_link {text-decoration:none; cursor:default;}
+			
+			.vevent .bold { font-weight:bold; }
