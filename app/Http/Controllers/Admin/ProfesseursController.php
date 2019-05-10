@@ -29,11 +29,11 @@ class ProfesseursController extends Controller {
 		//Auth::attempt(['email' => 'test@test.fr', 'password' => 'nino']);
 			$log=$auth->user();
 		//$myProfile= DB::table('users')->where('id','=',$log->id)->get();
-			$myProfile=User::with('cv')->where('id','=',$log->id)->get()->first();
+			//$myProfile=User::with('cv')->where('id','=',$log->id)->get()->first();
 		//dd($mypro);
 		//dd($auth->user()); 
 		//dd(Auth::check());
-			return view('Admin/adminIndex',compact('myProfile'));
+			return view('Admin/adminIndex',compact('log'));
 		}else{
 			return redirect()->back();
 		}

@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="{{ asset('/designAdmin/vendors/flag-icon-css/css/flag-icon.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/designAdmin/vendors/selectFX/css/cs-skin-elastic.css') }}">
     <link rel="stylesheet" href="{{ asset('/designAdmin/vendors/jqvmap/dist/jqvmap.min.css') }}">
-
+    @yield('css')
 
     <link rel="stylesheet" href="{{ asset('/designAdmin/assets/css/style.css') }}">
 
@@ -104,6 +104,27 @@
                         </ul>
                     </li>
 
+                    <h3 class="menu-title">Le Laboratoir</h3><!-- /.menu-title -->
+                    <li>
+                        <a href="{{ route("superAdmin.presentations.index") }}"> <i class="menu-icon ti-email"></i>Presentation</a>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Departement</a>
+                            <ul class="sub-menu children dropdown-menu">
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.departements.create') }}">Ajout departement</a></li>
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.departements.index') }}">Lister les department</a></li>
+                            </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Personnel</a>
+                            <ul class="sub-menu children dropdown-menu">
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.create') }}">Ajout departement</a></li>
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.index') }}">Lister les department</a></li>
+                            </ul>
+                    </li>
+
                     <h3 class="menu-title">Extras</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -111,7 +132,7 @@
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('admin/professeurs/cv') }}">gestion de ma page
                                     professeur</a></li>
-                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('/33') }}">voir le site</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('/') }}">voir le site</a></li>
                     </li>
                 </ul>
                 </li>
@@ -275,6 +296,7 @@
     <script src="{{ asset('/designAdmin/vendors/jqvmap/dist/jquery.vmap.min.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('/designAdmin/vendors/jqvmap/dist/maps/jquery.vmap.world.js') }}"></script>
+    @yield('js')
     <script>
         (function ($) {
             "use strict";

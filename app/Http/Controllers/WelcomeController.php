@@ -7,6 +7,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Presentation;
+
 class WelcomeController extends Controller {
 
 
@@ -39,7 +41,8 @@ class WelcomeController extends Controller {
 		return view('Labo/Acceuil');
 	}
 	public function about(){
-		return view('Labo/Presentation');
+		$presentations= Presentation::get();
+		return view('Labo/Presentation',compact('presentations'));
 	}
 	public function organigramme(){
 		return view('Labo/organigramme');

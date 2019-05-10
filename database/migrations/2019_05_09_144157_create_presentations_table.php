@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateEncadrementsTable extends Migration {
+class CreatePresentationsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,11 @@ class CreateEncadrementsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('encadrements', function(Blueprint $table)
+		Schema::create('presentations', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->string('categorie');
-			$table->string('sujet');
-			$table->integer('user_id')->unsigned()->index();
-			
+			$table->string('title')->unique();
+			$table->longText('content');
 			$table->timestamps();
 		});
 	}
@@ -30,8 +28,7 @@ class CreateEncadrementsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('encadrements');
-		Schema::drop('etudiants');
+		Schema::drop('presentations');
 	}
 
 }

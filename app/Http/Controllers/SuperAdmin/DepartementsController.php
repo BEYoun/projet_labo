@@ -2,39 +2,21 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\facades\Auth;
-use App\user;
-use Illuminate\Support\facades\Hash;
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
-class SuperProfesseursController extends Controller {
+class DepartementsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+	public function index()
+	{
+		//
+	}
 
-
-	
-	
-	public function index(Guard $auth)
-	{
-		
-		return view('SuperAdmin/index');
-	}
-	public function getAutorisation()
-	{
-		$users = User::all();
-		return view('SuperAdmin/users',compact('users'));
-	}
-	
-	public function getForum()
-	{
-		return view('SuperAdmin/forum');
-	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -43,6 +25,7 @@ class SuperProfesseursController extends Controller {
 	public function create()
 	{
 		//
+		return view('SuperAdmin/ajoutDepartement');
 	}
 
 	/**

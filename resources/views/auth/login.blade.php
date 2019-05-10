@@ -45,11 +45,6 @@
 				<div class="login-form">
 					<form role="form" method="POST" action="{{ url('/auth/login') }}">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-
-
-
-
 						<div class="form-group">
 							<label>Email address</label>
 							<input type="email" class="form-control" name="email"

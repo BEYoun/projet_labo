@@ -50,11 +50,14 @@ Route::get('/{var}','WelcomeController@service');
 
 Route::group(['namespace'=>'SuperAdmin','middleware'=>'auth','prefix' => 'superAdmin'], function () {
 	Route::controller('superProfesseurs', 'SuperProfesseursController');
-    	Route::resource('superProfesseurs', 'SuperProfesseursController');
+    Route::resource('superProfesseurs', 'SuperProfesseursController');
+    Route::resource('departements', 'DepartementsController');
+    Route::resource('personnels', 'PersonnelsController');
+    Route::resource('presentations', 'PresentationsController');
 });
 Route::group(['namespace'=>'Admin','middleware'=>'auth','prefix' => 'admin'], function () {
 	Route::controller('professeurs', 'ProfesseursController');
-    	Route::resource('professeurs', 'ProfesseursController');
+    Route::resource('professeurs', 'ProfesseursController');
     //Route::resource('professeurs/store', 'ProfesseursController');
 });
 

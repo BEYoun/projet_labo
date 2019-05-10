@@ -2,39 +2,24 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\facades\Auth;
-use App\user;
-use Illuminate\Support\facades\Hash;
-use Illuminate\Contracts\Auth\Guard;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Http\Request;
 
-class SuperProfesseursController extends Controller {
+use Illuminate\Http\Request;
+use App\Presentation;
+
+class PresentationsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
 	 */
+	public function index()
+	{
+		$presentations = Presentation::get();
+		return view('SuperAdmin/presentation',compact('presentations'));
+		//
+	}
 
-
-	
-	
-	public function index(Guard $auth)
-	{
-		
-		return view('SuperAdmin/index');
-	}
-	public function getAutorisation()
-	{
-		$users = User::all();
-		return view('SuperAdmin/users',compact('users'));
-	}
-	
-	public function getForum()
-	{
-		return view('SuperAdmin/forum');
-	}
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -42,6 +27,7 @@ class SuperProfesseursController extends Controller {
 	 */
 	public function create()
 	{
+		
 		//
 	}
 
@@ -50,8 +36,11 @@ class SuperProfesseursController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
+		Presentation::create($request->all());
+		$presentations = Presentation::get();
+		return view('SuperAdmin/presentation',compact('presentations'));
 		//
 	}
 
@@ -74,6 +63,7 @@ class SuperProfesseursController extends Controller {
 	 */
 	public function edit($id)
 	{
+
 		//
 	}
 
@@ -83,8 +73,12 @@ class SuperProfesseursController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id,Request $request)
 	{
+		$presentation=Presentation::findOrFail($id);
+		$presentation->update($request->all());
+		$presentations = Presentation::get();
+		return view('SuperAdmin/presentation',compact('presentations'));
 		//
 	}
 

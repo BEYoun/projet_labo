@@ -84,6 +84,19 @@ return [
 			'prefix'   => '',
 		],
 
+		'mongodb'=>[
+			'driver'   => 'mongodb',
+			'host'     => env('MONGO_DB_HOST', 'localhost'),
+			'port'	   => env('MONGO_DB_PORT', 3307),
+			'database' => env('MONGO_DB_DATABASE', 'forge'),
+			'username' => env('MONGO_DB_USERNAME', 'forge'),
+			'password' => env('MONGO_DB_PASSWORD', ''),
+			'prefix'   => '',
+			'option' =>[
+				'database' => 'admin'
+			]
+		]
+
 	],
 
 	/*

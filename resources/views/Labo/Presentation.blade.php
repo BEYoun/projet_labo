@@ -25,81 +25,17 @@
     <div class="colone_centrale_left">
         <a id="c2"></a>
         <p class="contenu_entete" style="margin:0 0 0 0;">Présentation</p>
+        @foreach ($presentations as $item)
         <p style="margin:0 0 0 0;">&nbsp;</p>
         <p style="margin:0 0 0 0;">
-            <h1>Le Mot du directeur</h1>
-        </p>
-        <p style="margin:0 0 0 0;">Gipsa-lab est une unité de recherche mixte du <a href="http://www.cnrs.fr/"
-                target="_blank">CNRS</a>, de <a href="http://www.grenoble-inp.fr/" target="_blank">Grenoble-INP</a> et
-            de
-            l'<a href="http://www.univ-grenoble-alpes.fr/" target="_blank">Université de Grenoble Alpes</a> ; elle est
-            conventionnée avec <a href="https://www.inria.fr/centre/grenoble" target="_blank">Inria</a> et l'<a
-                href="http://www.osug.fr/" target="_blank">Observatoire des Sciences de l'Univers de Grenoble.</a>
-        </p>
-        <p style="margin:0 0 0 0;"> Fort de 350 personnes dont environ 150 doctorants, Gipsa-lab est un laboratoire
-            pluridisciplinaire développant des recherches fondamentales et finalisées sur les <strong>signaux et
-                systèmes complexes</strong>. Il est reconnu internationalement pour ses recherches en
-            <strong>Automatique</strong>, <strong>Signal et Images</strong>, <strong>Parole et Cognition</strong> et
-            développe des projets dans les domaines stratégiques de l'énergie, de l'environnement, de la communication,
-            des systèmes intelligents, du vivant et de la santé et de l'ingénierie linguistique.
-        </p>
-        <p style="margin:0 0 0 0;"> De par la nature de ses recherches, Gipsa-lab maintient un lien constant avec le
-            milieu&nbsp;économique via un partenariat industriel fort.
-        </p>
-        <p style="margin:0 0 0 0;"> Son potentiel d'enseignants-chercheurs et chercheurs est investi dans la formation
-            au niveau des universités et écoles d'ingénieurs du site grenoblois (Université Grenoble Alpes).<br /><br />
+            <h1>{!! $item->title !!}</h1>
         </p>
         <p style="margin:0 0 0 0;">
-            <h1>Parfaire la chaîne de l'observation par le développement de méthodes avancées</h1>
+            {!! $item->content !!}
         </p>
-        <p style="margin:0 0 0 0;">La démarche scientifique s'appuie sur le développement de méthodes avancées en
-            automatique, traitement de la parole, signal et images. Ces méthodes intègrent des notions de réseau, de
-            contrôle-commande, de modélisation, d'analyse. Le souci est toujours présent de parfaire la chaîne de
-            l'observation jusqu'à la conduite du processus, à l'interprétation ou à l'enrichissement de l'information
-            multi-composante, multi-modale, multi-observation pour un diagnostic fiable et robuste.<br /><br />
-        </p>
-        <p style="margin:0 0 0 0;">
-            <h1>Une organisation en trois départements</h1>
-        </p>
-        <p style="margin:0 0 0 0;"><strong>Gipsa-lab développe ses recherches au travers de <span
-                    style="text-transform:uppercase;">12 équipes</span> organisées en <span
-                    style="text-transform:uppercase;">3 départements</span> :</strong>
-        </p>
-        <p style="margin:0 0 0 0;"><strong><a class="link_puce_auto"
-                    href="../recherche/departement-automatique.html">Automatique</a></strong><a
-                href="../index.html"></a>
-        </p>
-        <p style="margin:0 0 0 0;"><strong><a class="link_puce_im_si"
-                    href="../recherche/departement-images-signal.html">Images-signal</a></strong><a
-                href="../index.html"></a>
-        </p>
-        <p style="margin:0 0 0 0;"><strong><a class="link_puce_par_co"
-                    href="../recherche/departement-parole-cognition.html">Parole-cognition</a></strong><a
-                href="../index.html"></a>
-        </p>
-        <p style="margin:0 0 0 0;">&nbsp;</p>
-        <p style="margin:0 0 0 0;"> Parmi ses 12 équipes, une équipe-projet est commune avec l'INRIA Rhône-Alpes
-            (NECS), une équipe de recherche est reconnue par l'Observatoire des sciences de l'Univers de Grenoble
-            (SygmaPhy). Gipsa-lab est également membre et acteur des Instituts Carnot EF (Energie du Futur) et LSI
-            (Logiciels et Systèmes Intelligents) ainsi que du Pôle Grenoble Cognition, et du Labex
-            Persyval-lab.<br /><br />
-        </p>
-        <p style="margin:0 0 0 0;">
-            <h1>Un ensemble de 350 personnes</h1>
-        </p>
-        <p style="margin:0 0 0 0;">Gipsa-lab compte 150 permanents dont 70 enseignants-chercheurs et 41 chercheurs. Il
-            accueille également des chercheurs invités, des post-doctorants (une vingtaine) et des ATER.
-        </p>
-        <p style="margin:0 0 0 0;">Le personnel accompagnant la recherche (38 Ingénieurs et Techniciens) est réparti
-            dans les services communs.
-        </p>
-        <p style="margin:0 0 0 0;">Gipsa-lab encadre près de 150 thèses dont 50 nouvelles environ chaque année. Toutes
-            les thèses effectuées au laboratoire sont financées et encadrées par des enseignants chercheurs et
-            chercheurs, dont 50 titulaires d'une HDR.
-        </p>
-        <p style="margin:0 0 0 0;">Enfin, une soixantaine de stagiaires de master vient chaque printemps grossir les
-            rangs du laboratoire.</p><img src="../clear.gif" width="1" height="10" border="0" class="spacer-gif" alt=""
-            title="" /><br />
+            
+        @endforeach
+       
     </div>
 
 
