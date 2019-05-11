@@ -303,6 +303,7 @@ class ComposerStaticInitdee2edfb27abcf57dd0bf76f648bac5b
     );
 
     public static $classMap = array (
+        'AlterTable' => __DIR__ . '/../..' . '/database/migrations/2019_05_10_165228_alter_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePresentationsTable' => __DIR__ . '/../..' . '/database/migrations/2019_05_09_144157_create_presentations_table.php',
         'CreateServicesTable' => __DIR__ . '/../..' . '/database/migrations/2019_05_09_160439_create_services_table.php',

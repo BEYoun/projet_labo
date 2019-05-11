@@ -9,4 +9,8 @@ class Personnel extends Model {
 	{
 		return $this->belongsTo('App\User');
 	}
+	public function departement()
+	{
+		return $this->belongsTo('App\Personnel');
+	}
 }

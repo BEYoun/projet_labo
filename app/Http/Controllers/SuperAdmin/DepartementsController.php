@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Personnel;
+use App\Departement;
 
 class DepartementsController extends Controller {
 
@@ -15,6 +17,8 @@ class DepartementsController extends Controller {
 	public function index()
 	{
 		//
+		$departements = Departement::get();
+		return view('SuperAdmin/Departement/indexDepartement',compact('departements'));
 	}
 
 	/**
@@ -25,7 +29,8 @@ class DepartementsController extends Controller {
 	public function create()
 	{
 		//
-		return view('SuperAdmin/ajoutDepartement');
+		$personnels = Personnel::get();
+		return view('SuperAdmin/Departement/ajoutDepartement',compact('personnels'));
 	}
 
 	/**
@@ -33,8 +38,14 @@ class DepartementsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
+		$departement = Departement::create($request->all());
+		$personnel_responsable = Personnel::findOrFail($request->select);
+		$departement->personnel_responsable()->associate($personnel_responsable);
+		$departement->save();
+		$personnels = Personnel::get();
+		return view('SuperAdmin/Departement/ajoutDepartement',compact('personnels'));
 		//
 	}
 
