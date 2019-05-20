@@ -120,9 +120,19 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                                 aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Personnel</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.create') }}">Ajout departement</a></li>
-                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.index') }}">Lister les department</a></li>
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.create') }}">Ajout personnels</a></li>
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ route('superAdmin.personnels.index') }}">Lister le personnel</a></li>
                             </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false"> <i class="menu-icon fa fa-glass"></i>Distinctions</a>
+                        <ul class="sub-menu children dropdown-menu ">
+                                <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('superAdmin/distinctions/these') }}">Prix de These</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('superAdmin/distinctions/science') }}">Prix Scientifique</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('superAdmin/distinctions/honorifique') }}">Distinction honorifique</a></li>
+                            <li><i class="menu-icon fa fa-sign-in"></i><a href="{{ url('superAdmin/distinctions/nomination') }}">Nomination</a></li>
+                        </ul>
                     </li>
 
                     <h3 class="menu-title">Extras</h3><!-- /.menu-title -->

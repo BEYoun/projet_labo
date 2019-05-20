@@ -129,6 +129,22 @@ class WelcomeController extends Controller {
 	public function pdf(){
 		return view('Labo/pdf/pdf');
 	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	public function divers(){
+		return view('Labo/personnelView/pagepersonnel');
+	}
 
 	
 }

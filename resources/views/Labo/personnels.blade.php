@@ -44,7 +44,7 @@
 
                 <tr onmouseout="this.className='TR_Normal'" onmouseover="this.className='TR_Survol'" class="TR_Normal">
 
-                    <td><a href="../page_pro53b1.html?vid=559">ACHARD</a> Sophie</td>
+                    <td><a href="./pagepersonnel">ACHARD</a> Sophie</td>
 
                     <td> Chercheur </td>
 

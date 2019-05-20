@@ -11,6 +11,9 @@
 |
 */
 
+Route::get('pagepersonnel', ['as'=>'welcome','uses'=>'WelcomeController@divers']);
+
+
 Route::get('/', ['as'=>'welcome','uses'=>'WelcomeController@index']);
 Route::get('presentation', ['as'=>'about','uses'=>'WelcomeController@about']);
 Route::get('organigramme', ['as'=>'service','uses'=>'WelcomeController@organigramme']);
@@ -50,6 +53,7 @@ Route::get('/{var}','WelcomeController@service');
 
 Route::group(['namespace'=>'SuperAdmin','middleware'=>'auth','prefix' => 'superAdmin'], function () {
 	Route::controller('superProfesseurs', 'SuperProfesseursController');
+	Route::controller('distinctions', 'DistinctionsController');
     Route::resource('superProfesseurs', 'SuperProfesseursController');
     Route::resource('departements', 'DepartementsController');
     Route::resource('personnels', 'PersonnelsController');
@@ -65,3 +69,7 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+
+
